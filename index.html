@@ -1,0 +1,268 @@
+<!-- File: index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jarvis — Management Student</title>
+  <meta name="description" content="Personal website for a management student showcasing projects, resume, work samples and certificates." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' width='100' height='100' fill='%23000' /></svg>">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="prefers-smooth">
+  <header class="site-header" role="banner">
+    <div class="container header-grid">
+      <a href="#home" class="logo" aria-label="Home - Jarvis">Jarvis</a>
+      <nav class="main-nav" role="navigation" aria-label="Primary navigation">
+        <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="navList">Menu</button>
+        <ul id="navList" class="nav-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#work">My Work</a></li>
+          <li><a href="#certificates">Certificates</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Home -->
+    <section id="home" class="hero" aria-label="Home">
+      <div class="container hero-inner">
+        <div>
+          <h1 class="title">Hi, I'm <span class="accent">Jarvis</span></h1>
+          <p class="subtitle">Management student • Data-driven decision maker • Case-study enthusiast</p>
+          <p class="lead">I build strategic solutions, lead cross-functional projects, and present insights that drive performance. Explore my projects, resume and certificates below.</p>
+          <div class="cta-row">
+            <a class="btn primary" href="#projects">View Projects</a>
+            <a class="btn ghost" href="#resume">Download Resume</a>
+          </div>
+        </div>
+        <figure class="hero-card" aria-hidden="true">
+          <svg viewBox="0 0 200 120" class="hero-illustration" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+            <rect rx="12" width="200" height="120" fill="rgba(0,0,0,0.06)" />
+            <text x="18" y="72" font-size="18" font-family="system-ui, -apple-system, 'Segoe UI', Roboto">Management • Strategy • Analytics</text>
+          </svg>
+        </figure>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section" aria-labelledby="about-heading">
+      <div class="container">
+        <h2 id="about-heading">About Me</h2>
+        <div class="about-grid">
+          <div>
+            <p>I am a management student specializing in strategic management and business analytics. I enjoy transforming data into actionable strategy and leading teams to implement operational improvements.</p>
+
+            <ul class="about-list">
+              <li><strong>Focus Areas:</strong> Strategy, Analytics, Operations, Project Management</li>
+              <li><strong>Skills:</strong> Excel, Power BI, SQL, Presentation & Research</li>
+              <li><strong>Experience:</strong> Internships in consulting & operations, case competitions</li>
+            </ul>
+
+            <div class="badges">
+              <span class="pill">Team Leader</span>
+              <span class="pill">Case Competitor</span>
+              <span class="pill">Data-Driven</span>
+            </div>
+          </div>
+          <div class="profile-card">
+            <img src="https://via.placeholder.com/240x240.png?text=Profile" alt="Profile photo of Jarvis" loading="lazy">
+            <dl>
+              <dt>Location</dt>
+              <dd>Mumbai, India</dd>
+              <dt>Education</dt>
+              <dd>Bachelor of Management — Expected 2026</dd>
+              <dt>Languages</dt>
+              <dd>English • Hindi</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section" aria-labelledby="projects-heading">
+      <div class="container">
+        <h2 id="projects-heading">Projects</h2>
+        <p class="muted">Case studies and projects that demonstrate strategic thinking and analytical skills.</p>
+
+        <div class="projects-filter">
+          <label for="filterSelect" class="sr-only">Filter projects</label>
+          <select id="filterSelect" aria-label="Filter projects">
+            <option value="all">All</option>
+            <option value="strategy">Strategy</option>
+            <option value="analytics">Analytics</option>
+            <option value="operations">Operations</option>
+          </select>
+        </div>
+
+        <div id="projectsGrid" class="card-grid">
+          <!-- Project cards: sample entries. Duplicate and edit as needed. -->
+          <article class="card" data-category="analytics">
+            <h3>Customer Churn Model</h3>
+            <p class="eyebrow">Analytics • Team project</p>
+            <p>Built a churn prediction model using logistic regression and presented retention strategies that improved theoretical retention by 12%.</p>
+            <div class="card-actions">
+              <button class="btn ghost js-open-project" data-project='{"title":"Customer Churn Model","desc":"Modelled churn using logistic regression, feature engineering, and dashboarded KPIs.","skills":"Python, Excel, Power BI","link":"#"}'>Details</button>
+              <a class="btn tiny" href="#" aria-label="Open report">Report</a>
+            </div>
+          </article>
+
+          <article class="card" data-category="strategy">
+            <h3>Market Entry Strategy</h3>
+            <p class="eyebrow">Strategy • Solo</p>
+            <p>Designed a market-entry plan for a fintech product in Tier-2 cities focusing on partnerships and unit economics.</p>
+            <div class="card-actions">
+              <button class="btn ghost js-open-project" data-project='{"title":"Market Entry Strategy","desc":"Go-to-market plan with TAM/SAM/SOM analysis and pilot timeline.","skills":"Market Research, Excel","link":"#"}'>Details</button>
+              <a class="btn tiny" href="#">Slide Deck</a>
+            </div>
+          </article>
+
+          <article class="card" data-category="operations">
+            <h3>Process Optimization</h3>
+            <p class="eyebrow">Operations • Internship</p>
+            <p>Led a process optimization pilot that reduced lead time by 18% using lean principles and root cause analysis.</p>
+            <div class="card-actions">
+              <button class="btn ghost js-open-project" data-project='{"title":"Process Optimization","desc":"Kaizen-style improvements and KPI tracking to reduce lead time.","skills":"Lean, Six Sigma","link":"#"}'>Details</button>
+              <a class="btn tiny" href="#">Case Note</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume -->
+    <section id="resume" class="section" aria-labelledby="resume-heading">
+      <div class="container">
+        <h2 id="resume-heading">Resume</h2>
+        <p class="muted">Concise overview and downloadable resume.</p>
+        <div class="resume-grid">
+          <div>
+            <h3>Education</h3>
+            <p><strong>Bachelor of Management</strong>, University — Expected 2026</p>
+
+            <h3>Experience</h3>
+            <ul>
+              <li><strong>Operations Intern</strong> — Company, Summer 2024: Improved process lead time by 18%.</li>
+              <li><strong>Research Assistant</strong> — Project on market analytics: Built dashboards and presented recommendations.</li>
+            </ul>
+
+            <h3>Skills</h3>
+            <p>Excel, Power BI, SQL, Presentation, Project Management, Strategy</p>
+
+            <a class="btn primary" href="#" download="Jarvis_Resume.pdf">Download Resume (PDF)</a>
+          </div>
+
+          <aside class="resume-aside" aria-hidden="true">
+            <div class="kpi">
+              <div>
+                <p class="kpi-value">12%</p>
+                <p class="kpi-label">Retention uplift (model)</p>
+              </div>
+            </div>
+            <div class="kpi">
+              <div>
+                <p class="kpi-value">18%</p>
+                <p class="kpi-label">Lead-time reduction</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- My Work / Work Samples -->
+    <section id="work" class="section" aria-labelledby="work-heading">
+      <div class="container">
+        <h2 id="work-heading">My Work</h2>
+        <p class="muted">Selected reports, dashboards and presentations.</p>
+        <div class="work-grid card-grid">
+          <article class="card">
+            <h3>Sales Dashboard</h3>
+            <p>Interactive dashboard concept that slices revenue by region and product.</p>
+            <div class="card-actions">
+              <a class="btn tiny" href="#">Open</a>
+              <a class="btn tiny" href="#">Download</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Case Presentation — Retail</h3>
+            <p>Turnaround plan with 3-year financial projections and prioritized initiatives.</p>
+            <div class="card-actions">
+              <a class="btn tiny" href="#">View</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificates -->
+    <section id="certificates" class="section" aria-labelledby="certs-heading">
+      <div class="container">
+        <h2 id="certs-heading">Certificates</h2>
+        <p class="muted">Professional certifications and course completions.</p>
+        <ul class="cert-list">
+          <li><button class="cert-btn" data-cert='{"title":"Six Sigma Yellow Belt","issuer":"Coursera","date":"2024"}'>Six Sigma Yellow Belt — Coursera (2024)</button></li>
+          <li><button class="cert-btn" data-cert='{"title":"Foundations of Data Analysis","issuer":"edX","date":"2023"}'>Foundations of Data Analysis — edX (2023)</button></li>
+          <li><button class="cert-btn" data-cert='{"title":"Excel for Business","issuer":"LinkedIn Learning","date":"2024"}'>Excel for Business — LinkedIn Learning (2024)</button></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section" aria-labelledby="contact-heading">
+      <div class="container">
+        <h2 id="contact-heading">Contact</h2>
+        <p>If you'd like to work together or have questions, send a short message.</p>
+        <form id="contactForm" class="contact-form" novalidate>
+          <label for="name">Name</label>
+          <input id="name" name="name" required minlength="2">
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <div class="form-actions">
+            <button class="btn primary" type="submit">Send</button>
+            <button class="btn ghost" type="reset">Reset</button>
+          </div>
+          <p id="formStatus" class="form-status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>© <span id="year"></span> Jarvis — Management Student. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Project / Certificate Modal -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-panel" role="document">
+      <button id="modalClose" class="modal-close" aria-label="Close details">×</button>
+      <h3 id="modalTitle">Title</h3>
+      <p id="modalBody"></p>
+      <p id="modalMeta" class="muted"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
